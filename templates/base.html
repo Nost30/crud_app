@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library</title>
+</head>
+<body>
+    <h1>Game Library</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('add_game') }}">Add Game</a> |
+        <form action="{{ url_for('search_game') }}" method="post" style="display: inline;">
+            <input type="text" name="search" placeholder="Search Game">
+            <input type="submit" value="Search">
+        </form>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
